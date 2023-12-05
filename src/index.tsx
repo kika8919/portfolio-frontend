@@ -15,7 +15,9 @@ if (import.meta.env.VITE_SENTRY_DSN) {
 const container = document.getElementById('root');
 const root = createRoot(container as Element);
 root.render(
-  <AppProviders>
-    <AppRoutes />
-  </AppProviders>,
+  <React.StrictMode>
+    <AppProviders>
+      <AppRoutes />
+    </AppProviders>
+  </React.StrictMode>,
 );
